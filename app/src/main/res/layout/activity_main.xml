@@ -28,8 +28,8 @@
             android:hint="IP"
             android:textAlignment="center"
             android:layout_marginTop="50dp"
-            android:textColor="@color/colorAccent"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
              />
 
         <EditText
@@ -40,23 +40,11 @@
             android:inputType="number|textPersonName|text|textEmailAddress"
             android:hint="PORT"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
             android:layout_marginTop="25dp"
             />
 
-        <EditText
-            android:id="@+id/message"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="MESSAGE"
-            android:textAlignment="center"
-            android:layout_marginTop="25dp"
-            android:textColor="@color/colorAccent"
-            android:textColorHint="@color/colorAccent"
-             />
 
         <Button
             android:id="@+id/send"
@@ -66,6 +54,37 @@
             android:text="Send"
 
             />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="XValue"
+            android:textAlignment="center"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:id="@+id/txtXValue"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="YValue"
+            android:textAlignment="center"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:id="@+id/txtYValue"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ZValue"
+            android:textAlignment="center"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:id="@+id/txtZValue"
+            />
+
+
     </LinearLayout>
 
 </RelativeLayout>
