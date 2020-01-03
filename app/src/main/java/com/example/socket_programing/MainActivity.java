@@ -41,9 +41,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         yValue=findViewById(R.id.txtYValue);
         zValue=findViewById(R.id.txtZValue);
         acelerometer=sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        sensorManager.registerListener(MainActivity.this,acelerometer,SensorManager.SENSOR_DELAY_NORMAL);
-
-
+        sensorManager.registerListener(MainActivity.this,acelerometer,SensorManager.SENSOR_DELAY_UI);
         findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
