@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\906744c4ddcbc384c5a8d2d69414f8fa\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-plus:17.0.0] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\3314ea0c461b9e3c4e521ec6b0125dc2\play-services-plus-17.0.0\AndroidManifest.xml:17:1-24:12
@@ -38,33 +38,37 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\szocs\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\a1f5477cd6fd5fad9baa3e263bec7d60\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\60b50828def4ba3859898ffb4c971c21\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\699bc310780b1730bce8fe271ffeca8b\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:5:5-76
+	android:name
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:5:22-73
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:6:5-94
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:7:5-94
 	android:name
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:6:22-91
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:7:22-91
 application
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:8:5-24:19
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:9:5-25:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-plus:17.0.0] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\3314ea0c461b9e3c4e521ec6b0125dc2\play-services-plus-17.0.0\AndroidManifest.xml:22:5-20
@@ -88,35 +92,35 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\sz
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] C:\Users\szocs\.gradle\caches\transforms-2\files-2.1\c0a39027978b83a483a047f5c31d0c4e\core-1.0.1\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:15:9-40
 activity#com.example.socket_programing.MainActivity
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:15:9-21:20
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:15:19-47
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:16:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:20:27-74
 service#com.example.socket_programing.ActivityRecognizedService
-ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:23:9-62
+ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:24:9-62
 	android:name
-		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:23:18-59
+		ADDED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml:24:18-59
 uses-sdk
 INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\szocs\Desktop\Projekt\Android\Socket_programing\app\src\main\AndroidManifest.xml

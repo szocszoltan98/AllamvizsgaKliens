@@ -2,6 +2,7 @@ package com.example.socket_programing;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.util.Log;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -16,15 +17,20 @@ import java.net.Socket;
 import java.util.List;
 
 import static com.google.android.gms.plus.PlusOneDummyView.TAG;
+import static java.security.AccessController.getContext;
 
 public class ActivityRecognizedService extends IntentService {
-    public String ipAdress=": 192.168.1.3";
+    public String ipAdress=": 192.168.1.2";
     public int port=100;
     public Socket client;
-    public int number;
+    public int number,db=0;
+    public String type;
+    public String msg="",msg2="",msg3="",msg4="",msg5="",msg6="",msg7="",msg8="";
     public ActivityRecognizedService(){
         super("ActivityRecognizedService");
     }
+
+
 
     public ActivityRecognizedService(String name){
         super(name);
@@ -40,214 +46,135 @@ public class ActivityRecognizedService extends IntentService {
     }
 
 
+
     private void handleDetectedActivity(List<DetectedActivity> probableActivities)
     {
+        Intent intent=new Intent(ActivityRecognizedService.this,MainActivity.class);
+        intent.putExtra("vehicle",msg);
+        intent.putExtra("bicycle",msg2);
+        intent.putExtra("run",msg3);
+        intent.putExtra("walk",msg4);
+        intent.putExtra("still",msg5);
+        intent.putExtra("unknown",msg6);
+        intent.putExtra("foot",msg7);
+        intent.putExtra("tilting",msg8);
         for(DetectedActivity activity: probableActivities)
         {
-            Log.d(TAG,"***************************************************************************" ) ;
+
+
             switch(activity.getType()) {
 
                 case DetectedActivity.IN_VEHICLE: {
                     number = activity.getConfidence();
-                    final String msg="handleDetectedActivity: IN_VEHICLE:" + number;
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                client = new Socket(ipAdress, port);
-                                PrintWriter printWriter = new PrintWriter(client.getOutputStream());
-                                printWriter.write("\n");
-                                printWriter.write(msg);
-                                printWriter.flush();
-                                printWriter.close();
-                                client.close();
-
-                            }catch(Exception e)
-                            {
-                                e.printStackTrace();
-
-                            }
-
-                        }
-
-
-                    }).start();
-                    Log.d(TAG,"handleDetectedActivity: IN_VEHICLE:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Vehicle", Toast.LENGTH_SHORT).show();
+                    msg="VEHICLE:" + number;
+                    Log.d(TAG,"handleDetectedActivity:" + msg);
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Vehicle", Toast.LENGTH_SHORT).show();
+                    }
 
 
                     break;
                 }
                 case DetectedActivity.ON_BICYCLE: {
                     number = activity.getConfidence();
-                    final String msg2="handleDetectedActivity: ON_BICYCLE:" + number;
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                client = new Socket(ipAdress, port);
-                                PrintWriter printWriter = new PrintWriter(client.getOutputStream());
-                                printWriter.write("\n");
-                                printWriter.write(msg2);
-                                printWriter.flush();
-                                printWriter.close();
-                                client.close();
-
-                            }catch(Exception e)
-                            {
-                                e.printStackTrace();
-
-                            }
-
-                        }
-
-
-                    }).start();
-                    Log.d(TAG,"handleDetectedActivity: ON_BICYCLE:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Bicycle", Toast.LENGTH_SHORT).show();
+                    msg2="BICYCLE:" + number;
+                    Log.d(TAG,"handleDetectedActivity:" + msg2);
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Bicycle", Toast.LENGTH_SHORT).show();
+                    }
 
                     break;
                 }
-                /*case DetectedActivity.ON_FOOT: {
-                    Log.d(TAG,"handleDetectedActivity: ON_FOOT:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Foot", Toast.LENGTH_SHORT).show();
-                    break;
-                }*/
                 case DetectedActivity.RUNNING: {
                     number = activity.getConfidence();
-                    final String msg3="handleDetectedActivity:  RUNNING:" + number;
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                client = new Socket(ipAdress, port);
-                                PrintWriter printWriter = new PrintWriter(client.getOutputStream());
-                                printWriter.write("\n");
-                                printWriter.write(msg3);
-                                printWriter.flush();
-                                printWriter.close();
-                                client.close();
-
-                            }catch(Exception e)
-                            {
-                                e.printStackTrace();
-
-                            }
-
-                        }
-
-
-                    }).start();
-
-                    Log.d(TAG,"handleDetectedActivity: RUNNING:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Run", Toast.LENGTH_SHORT).show();
+                    msg3="RUNNING:" + number;
+                    Log.d(TAG,"handleDetectedActivity:" + msg3);
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Run", Toast.LENGTH_SHORT).show();
+                    }
 
                     break;
                 }
                 case DetectedActivity.WALKING: {
                     number = activity.getConfidence();
-                    final String msg4="handleDetectedActivity: WALKING:" + number;
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                client = new Socket(ipAdress, port);
-                                PrintWriter printWriter = new PrintWriter(client.getOutputStream());
-                                printWriter.write("\n");
-                                printWriter.write(msg4);
-                                printWriter.flush();
-                                printWriter.close();
-                                client.close();
-
-                            }catch(Exception e)
-                            {
-                                e.printStackTrace();
-
-                            }
-
-                        }
-
-
-                    }).start();
-                    Log.d(TAG,"handleDetectedActivity: WALKING:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Walk", Toast.LENGTH_SHORT).show();
+                    msg4="WALKING:" + number;
+                    Log.d(TAG,"handleDetectedActivity: " + msg4);
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Walk", Toast.LENGTH_SHORT).show();
+                    }
 
                     break;
                 }
                 case DetectedActivity.STILL: {
                     number = activity.getConfidence();
-                    final String msg5="handleDetectedActivity:  STILL:" + number;
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                client = new Socket(ipAdress, port);
-                                PrintWriter printWriter = new PrintWriter(client.getOutputStream());
-                                printWriter.write("\n");
-                                printWriter.write(msg5);
-                                printWriter.flush();
-                                printWriter.close();
-                                client.close();
-
-                            }catch(Exception e)
-                            {
-                                e.printStackTrace();
-
-                            }
-
-                        }
-
-
-                    }).start();
-                    Log.d(TAG,"handleDetectedActivity: STILL:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Still", Toast.LENGTH_SHORT).show();
+                    msg5="STILL:" + number;
+                    Log.d(TAG,"handleDetectedActivity: " + msg5);
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Still", Toast.LENGTH_SHORT).show();
+                    }
 
                     break;
                 }
-
-                /*case DetectedActivity.TILTING: {
-                    Log.d(TAG,"handleDetectedActivity: TILTING:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Tilt", Toast.LENGTH_SHORT).show();
-                    break;
-                }*/
                 case DetectedActivity.UNKNOWN: {
                     number = activity.getConfidence();
-                    final String msg6="handleDetectedActivity: UNKNOWN:" + number;
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                client = new Socket(ipAdress, port);
-                                PrintWriter printWriter = new PrintWriter(client.getOutputStream());
-                                printWriter.write("\n");
-                                printWriter.write(msg6);
-                                printWriter.flush();
-                                printWriter.close();
-                                client.close();
 
-                            }catch(Exception e)
-                            {
-                                e.printStackTrace();
-
-                            }
-
-                        }
-
-
-                    }).start();
-                    Log.d(TAG,"handleDetectedActivity: UNKNOWN:" + activity.getConfidence());
-                    Toast.makeText(this, "Now Unknown", Toast.LENGTH_SHORT).show();
-
+                    msg6="UNKNOWN:" + number;
+                    Log.d(TAG,"handleDetectedActivity:" + msg6);
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Unknown", Toast.LENGTH_SHORT).show();
+                    }
                     break;
                 }
+                case DetectedActivity.ON_FOOT: {
+                    Log.d(TAG,"handleDetectedActivity: ON_FOOT:" + activity.getConfidence());
+                    number = activity.getConfidence();
+                    msg7="FOOT:" + number;
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Foot", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                }
+
+                case DetectedActivity.TILTING: {
+                    Log.d(TAG,"handleDetectedActivity: TILTING:" + activity.getConfidence());
+                    number = activity.getConfidence();
+                    msg8="STILL:" + number;
+                    if(number>75)
+                    {
+                        Toast.makeText(this, "Now Tilt", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                }
+
 
 
             }
+            intent.putExtra("vehicle",msg);
+            intent.putExtra("bicycle",msg2);
+            intent.putExtra("run",msg3);
+            intent.putExtra("walk",msg4);
+            intent.putExtra("still",msg5);
+            intent.putExtra("unknown",msg6);
+            intent.putExtra("foot",msg7);
+            intent.putExtra("tilt",msg8);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK );
+            startActivity(intent);
 
 
 
         }
+
+
     }
+
+
 
 }
 
